@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum & Gemenskap</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .forum-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+        }
+        .forum-content {
+            background: rgba(255,255,255,0.95);
+            padding: 2.5rem 2rem;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(60, 60, 120, 0.18);
+            max-width: 500px;
+            text-align: center;
+        }
+        .forum-content h1 {
+            color: #66a6ff;
+            margin-bottom: 1rem;
+        }
+        .forum-content p {
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        .forum-content ul {
+            text-align: left;
+            margin: 1.5rem auto;
+            max-width: 350px;
+            color: #333;
+        }
+        .forum-content li {
+            margin-bottom: 0.7rem;
+            font-size: 1.1rem;
+        }
+        .forum-content a {
+            color: #66a6ff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .forum-content a:hover {
+            color: #4f8cff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="forum-container">
+        <div class="forum-content">
+            <h1>Forum & Gemenskap</h1>
+            <p>Här kan du ställa frågor, dela erfarenheter och hjälpa andra. (Demo – ingen backend än!)</p>
+            <ul>
+                <li><a href="#">Hur lär jag mig programmera?</a></li>
+                <li><a href="#">Tips för att hitta jobb?</a></li>
+                <li><a href="#">Dela din framgångshistoria!</a></li>
+            </ul>
+            <p style="margin-top:2rem; color:#888; font-size:0.95rem;">Vill du ha ett riktigt forum? Säg till!</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "training-camp-mohammad",
+  "version": "1.0.0",
+  "description": "Im going to start from scratch and build my way up just like a game!",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mohammed001200/Training-Camp-Mohammad.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mohammed001200/Training-Camp-Mohammad/issues"
+  },
+  "homepage": "https://github.com/Mohammed001200/Training-Camp-Mohammad#readme"
+}

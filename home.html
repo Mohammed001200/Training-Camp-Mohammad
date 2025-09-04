@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Välkommen till Din Hjälpsamma Sida</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            color: #2d3a4a;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .hero .cta-buttons {
+            display: flex;
+            gap: 1.2rem;
+            justify-content: center;
+        }
+        .hero .cta-buttons a {
+            padding: 0.9rem 2.2rem;
+            background: linear-gradient(90deg, #66a6ff 0%, #89f7fe 100%);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(102,166,255,0.12);
+            transition: background 0.2s, transform 0.1s;
+        }
+        .hero .cta-buttons a:hover {
+            background: linear-gradient(90deg, #4f8cff 0%, #5ee7df 100%);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .features {
+            background: #fff;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        .features h2 {
+            color: #ff7e5f;
+            margin-bottom: 1.5rem;
+        }
+        .features-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+        .feature {
+            background: #f7fafc;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(60, 60, 120, 0.08);
+            padding: 1.5rem 1.2rem;
+            max-width: 260px;
+        }
+        .feature h3 {
+            color: #2d3a4a;
+            margin-bottom: 0.7rem;
+        }
+        .feature p {
+            color: #555;
+            font-size: 1rem;
+        }
+        @media (max-width: 700px) {
+            .features-list {
+                flex-direction: column;
+                gap: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Välkommen till Din Hjälpsamma Sida!</h1>
+        <p>En plats där du får exklusiva tips, guider och inspiration. Skapa ett konto och upptäck allt som finns att lära!</p>
+        <div class="cta-buttons">
+            <a href="index.html">Logga in</a>
+            <a href="#subscribe">Prenumerera</a>
+            <a href="nytta.html">Resurser</a>
+            <a href="forum.html">Forum</a>
+            <a href="om-oss.html">Om Oss</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+    </div>
+    <div class="features">
+        <h2>Varför bli medlem?</h2>
+        <div class="features-list">
+            <div class="feature">
+                <h3>Exklusivt Innehåll</h3>
+                <p>Få tillgång till guider, tips och resurser som inte finns någon annanstans.</p>
+            </div>
+            <div class="feature">
+                <h3>Gemenskap</h3>
+                <p>Delta i forum, ställ frågor och få hjälp av andra medlemmar.</p>
+            </div>
+            <div class="feature">
+                <h3>Inspiration</h3>
+                <p>Upptäck nya idéer och projekt varje vecka – perfekt för dig som vill utvecklas!</p>
+            </div>
+        </div>
+    </div>
+    <section id="subscribe" style="background: #f0f2f5; padding: 3rem 1rem; text-align: center;">
+        <h2 style="color:#ff7e5f;">Bli prenumerant</h2>
+        <p style="max-width:500px; margin:0 auto 2rem auto; color:#444;">Prenumerera för att få tillgång till allt exklusivt innehåll, guider och inspiration. Fyll i din e-postadress så kontaktar vi dig när tjänsten är igång!</p>
+        <form id="subscribe-form" style="display:flex; flex-direction:column; align-items:center; gap:1rem; max-width:350px; margin:0 auto;">
+            <input type="email" id="subscriber-email" placeholder="Din e-postadress" required style="padding:0.7rem 1rem; border-radius:8px; border:1.5px solid #cfd8dc; font-size:1rem; width:100%;">
+            <button type="submit" style="padding:0.8rem 0; background:linear-gradient(90deg, #66a6ff 0%, #89f7fe 100%); color:#fff; border:none; border-radius:8px; font-size:1.1rem; font-weight:600; cursor:pointer; width:100%;">Prenumerera</button>
+        </form>
+        <div id="subscribe-message" style="margin-top:1.2rem; color:#2d3a4a; font-weight:500;"></div>
+    </section>
+    <script>
+    // Enkel hantering av prenumerationsformulär
+    document.getElementById('subscribe-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var email = document.getElementById('subscriber-email').value;
+        var msg = document.getElementById('subscribe-message');
+        if(email && email.includes('@')) {
+            msg.textContent = 'Tack för din intresse! Vi kontaktar dig snart.';
+            msg.style.color = '#5ee7df';
+            document.getElementById('subscriber-email').value = '';
+        } else {
+            msg.textContent = 'Ange en giltig e-postadress.';
+            msg.style.color = '#ff6b6b';
+        }
+    });
+    </script>
+</body>
+</html>

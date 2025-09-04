@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+        }
+        .contact-content {
+            background: rgba(255,255,255,0.95);
+            padding: 2.5rem 2rem;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(60, 60, 120, 0.18);
+            max-width: 500px;
+            text-align: center;
+        }
+        .contact-content h1 {
+            color: #66a6ff;
+            margin-bottom: 1rem;
+        }
+        .contact-content p {
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        .contact-content form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .contact-content input, .contact-content textarea {
+            padding: 0.7rem 1rem;
+            border-radius: 8px;
+            border: 1.5px solid #cfd8dc;
+            font-size: 1rem;
+        }
+        .contact-content button {
+            padding: 0.8rem 0;
+            background: linear-gradient(90deg, #66a6ff 0%, #89f7fe 100%);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .contact-content button:hover {
+            background: linear-gradient(90deg, #4f8cff 0%, #5ee7df 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <div class="contact-content">
+            <h1>Kontakt</h1>
+            <p>Har du frågor, idéer eller vill du bidra? Skicka ett meddelande!</p>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Ditt namn" required>
+                <input type="email" id="email" placeholder="Din e-post" required>
+                <textarea id="message" rows="4" placeholder="Ditt meddelande" required></textarea>
+                <button type="submit">Skicka</button>
+            </form>
+            <div id="contact-message" style="margin-top:1.2rem; color:#2d3a4a; font-weight:500;"></div>
+        </div>
+    </div>
+    <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+        var msg = document.getElementById('contact-message');
+        if(name && email && message && email.includes('@')) {
+            msg.textContent = 'Tack för ditt meddelande! Vi återkommer snart.';
+            msg.style.color = '#5ee7df';
+            document.getElementById('contact-form').reset();
+        } else {
+            msg.textContent = 'Fyll i alla fält och ange en giltig e-postadress.';
+            msg.style.color = '#ff6b6b';
+        }
+    });
+    </script>
+</body>
+</html>

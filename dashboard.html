@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Din Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .dashboard-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+        }
+        .dashboard-content {
+            background: rgba(255,255,255,0.95);
+            padding: 2.5rem 2rem;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(60, 60, 120, 0.18);
+            max-width: 420px;
+            text-align: center;
+        }
+        .dashboard-content h1 {
+            color: #ff7e5f;
+            margin-bottom: 1rem;
+        }
+        .dashboard-content p {
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        .dashboard-links a {
+            display: inline-block;
+            margin: 0.5rem 1rem;
+            color: #ff7e5f;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .dashboard-links a:hover {
+            color: #feb47b;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="dashboard-content">
+            <h1>Välkommen!</h1>
+            <p>Här hittar du inspirerande länkar och roliga saker att utforska:</p>
+            <div class="dashboard-links">
+                <a href="https://www.svt.se/nyheter/" target="_blank">Svenska nyheter</a>
+                <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+                <a href="https://www.codecademy.com/" target="_blank">Lär dig koda</a>
+                <a href="https://unsplash.com/" target="_blank">Vackra bilder</a>
+            </div>
+            <p style="margin-top:2rem; color:#888; font-size:0.95rem;">Roligt att se er här 😂</p>
+        </div>
+    </div>
+</body>
+</html>
